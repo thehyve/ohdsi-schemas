@@ -645,7 +645,7 @@ ohdsi:Discontinued  a     schema:MedicalStudyStatus ;
 
 ohdsi:MedicalStudyType  a owl:NamedIndividual , owl:Class ;
         rdfs:comment      "The type of a medical study. Enumerated type."@en ;
-        rdfs:label        "MedicalStudyStatus"@en ;
+        rdfs:label        "MedicalStudyType"@en ;
         rdfs:subClassOf   schema:MedicalEnumeration .
 
 ohdsi:ClinicalApplication  a  ohdsi:MedicalStudyType ;
@@ -658,7 +658,7 @@ ohdsi:MethodsResearch  a  ohdsi:MedicalStudyType ;
 
 ohdsi:MedicalStudyUseCase  a  owl:NamedIndividual , owl:Class ;
         rdfs:comment      "The use case of a medical study. Enumerated type."@en ;
-        rdfs:label        "MedicalStudyStatus"@en ;
+        rdfs:label        "MedicalStudyUseCase"@en ;
         rdfs:subClassOf   schema:MedicalEnumeration .
 
 ohdsi:Characterization  a  ohdsi:MedicalStudyUseCase ;
