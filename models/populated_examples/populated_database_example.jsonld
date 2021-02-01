@@ -7,7 +7,7 @@
     "telephone" : "+390000000"
   }, {
     "@id" : "database:ars",
-    "@type" : "ohdsi:Database",
+    "@type" : "schema:Dataset",
     "administrativeContact" : "ohdsi:person/JaneDoe",
     "associatedInstitution" : "Agenzia regionale di sanità della Toscana",
     "databaseCharacteristic" : [ "Primary care records", "EHR data" ],

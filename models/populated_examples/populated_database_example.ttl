@@ -5,7 +5,7 @@
 @prefix database: <https://covid19.ohdsi.app/database/> .
 @prefix person: <https://covid19.ohdsi.app/author/> .
 
-database:ars a ohdsi:Database ;
+database:ars a schema:Dataset ;
     schema:identifier "ARS1" ;
     schema:name "Agenzia regionale di sanità della Toscana" ;
     schema:alternateName "ARS" ;
