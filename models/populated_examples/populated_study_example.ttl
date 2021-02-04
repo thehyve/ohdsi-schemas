@@ -23,14 +23,11 @@ study:hcq a schema:MedicalObservationalStudy ;
 	schema:author person:JenniferLane, person:JamesWeaver, person:DanielPrietoAlhambra, person:MartijnSchuemie ;
 	schema:dateCreated "2020-04-02"^^xsd:date ; # Start date of study
 	schema:discussionUrl "https://forums.ohdsi.org/" ; # Placeholder for URL to forum discussions, no forum thread available for this study
-	schema:result [ a schema:WebApplication ;
-                  schema:mainEntityofPage "https://data.ohdsi.org/Covid19EstimationHydroxychloroquine/" ;
-                  schema:name "Risk of hydroxychloroquine, alone and in combination with azithromycin: a multi-national study"
-                ],
-                [ a schema:WebApplication ; # A study can have multiple Shiny visualizations available, hence the duplication
-                  schema:mainEntityofPage "https://data.ohdsi.org/Covid19EstimationHydroxychloroquine/" ;
-                  schema:name "Risk of hydroxychloroquine, alone and in combination with azithromycin: a multi-national study"
-                ] ;
+	schema:result [ a schema:Dataset ;
+                  schema:url "https://data.ohdsi.org/Covid19EstimationHydroxychloroquine/" ;
+                  schema:name "Risk of hydroxychloroquine, alone and in combination with azithromycin: a multi-national study";
+				  schema:keywords "COVID-19", "hydroxychloroquine"
+                ],     
 	schema:publication <https://doi.org/10.13063/2327-9214.1189>, <https://doi.org/10.13063/2327-9214.1189>  ; # Placeholder for study publication, no publication available for this study. A study can have multiple publications, hence the duplication.
 	schema:hasPart [ a schema:SoftwareSourceCode ;
                    schema:codeRepository "https://github.com/ohdsi-studies/Covid19EstimationHydroxychloroquine" ;
@@ -51,7 +48,7 @@ study:hcq a schema:MedicalObservationalStudy ;
                    schema:softwareVersion "1"^^xsd:decimal ;
                    schema:maintainer ohdsi:OHDSI
                  ] ;
-	ohdsi:database database:sidiap, database:thin, database:ipci, database:cprd .
+	ohdsi:database database:ars, database:thin, database:ipci, database:cprd .
 
 <https://covid19.ohdsi.app/study/hcq/design> a schema:MedicalObservationalStudyDesign ;
 	schema:identifier "..." ; #There is no protocol identifier available for this study
@@ -193,10 +190,6 @@ person:schuemie a schema:Person ;
   schema:mainEntityOfPage "https://www.ohdsi.org/who-we-are/collaborators/martijn-schuemie/" ;
 	ohdsi:githubHandle "https://github.com/schuemie" ;
 	ohdsi:googleScholarID "https://scholar.google.com/citations?user=oxWLqMkAAAAJ" .
-
-database:sidiap a ohdsi:Database ;
-	schema:identifier "SIDIAP" ;
-	schema:name "The Information System for the Development of Research in Primary Care" .
 
 database:thin a ohdsi:Database ;
 	schema:identifier "THIN" ;
