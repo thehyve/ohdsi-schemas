@@ -203,22 +203,22 @@
     "worksFor" : "_:b4"
   }, {
     "@id" : "database:cprd",
-    "@type" : "ohdsi:Database",
+    "@type" : "schema:Dataset",
     "identifier" : "CPRD",
     "name" : "Clinical Practice Research Datalink"
   }, {
     "@id" : "database:ipci",
-    "@type" : "ohdsi:Database",
+    "@type" : "schema:Dataset",
     "identifier" : "IPCI",
     "name" : "Integrated Primary Care Information"
   }, {
     "@id" : "database:sidiap",
-    "@type" : "ohdsi:Database",
+    "@type" : "schema:Dataset",
     "identifier" : "SIDIAP",
     "name" : "The Information System for the Development of Research in Primary Care"
   }, {
     "@id" : "database:thin",
-    "@type" : "ohdsi:Database",
+    "@type" : "schema:Dataset",
     "identifier" : "THIN",
     "name" : "The Health Improvement Network"
   }, {
