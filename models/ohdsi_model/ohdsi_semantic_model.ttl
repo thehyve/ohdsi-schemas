@@ -623,6 +623,18 @@ schema:endDate  a         owl:datatypeProperty ;
 
 # Study extensions
 
+ohdsi:studyExecutionRun a owl:Class ;
+        rdfs:comment      "The execution of a study package in a specific database, resulting in a study result dataset."@en ;
+        rdfs:label        "Database"@en ;
+        rdfs:subClassOf   schema:CreateAction .
+
+ohdsi:studyExecutionResult a owl:Class ;
+        rdfs:comment      "The result dataset of executing a study package in a database or set of databases."@en ;
+        rdfs:label        "StudyExecutionResult"@en ;
+        rdfs:subClassOf   schema:Dataset .
+
+# Study properties
+
 ohdsi:Started  a          schema:MedicalStudyStatus ;
         rdfs:label        "Started"@en ;
         rdfs:comment      "Design of medical study has commenced"@en .
@@ -691,8 +703,10 @@ ohdsi:analyticsUseCase  a  owl:DatatypeProperty ;
 
 ohdsi:database  a         owl:ObjectProperty ;
         rdfs:label        "database"@en ;
-        rdfs:domain       schema:MedicalObservationalStudy ;
-        rdfs:range         [     a owl:Class ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( schema:MedicalObservationalStudy ohdsi:StudyExecutionRun )
+                          ] ;
+        rdfs:range        [     a owl:Class ;
                                 owl:unionOf (ohdsi:Database schema:Dataset)
                           ]  ;
         rdfs:comment      "This property indicates the databases in which the study was conducted"@en .
