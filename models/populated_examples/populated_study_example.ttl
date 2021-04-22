@@ -25,9 +25,14 @@ study:hcq a schema:MedicalObservationalStudy ;
 	schema:discussionUrl "https://forums.ohdsi.org/" ; # Placeholder for URL to forum discussions, no forum thread available for this study
 	schema:result [ a schema:Dataset ;
                   schema:url "https://data.ohdsi.org/Covid19EstimationHydroxychloroquine/" ;
-                  schema:name "Risk of hydroxychloroquine, alone and in combination with azithromycin: a multi-national study";
+                  schema:description "In this multinational, retrospective study, new user cohort studies in patients with rheumatoid arthritis aged 18 years or older and initiating hydroxychloroquine were compared with those initiating sulfasalazine and followed up over 30 days, with 16 severe adverse events studied. Self-controlled case series were done to further establish safety in wider populations, and included all users of hydroxychloroquine regardless of rheumatoid arthritis status or indication.";
+				  schema:name "Risk of hydroxychloroquine, alone and in combination with azithromycin: a multi-national study";
 				  schema:keywords "COVID-19", "hydroxychloroquine"
-                ];     
+                ],  
+				[ a schema:WebApplication ;
+                  schema:url "https://data.ohdsi.org/Covid19EstimationHydroxychloroquine/" ;
+                  schema:description "Risk of hydroxychloroquine, alone and in combination with azithromycin: a multi-national study"
+                ];
 	schema:publication <https://doi.org/10.13063/2327-9214.1189>, <https://doi.org/10.13063/2327-9214.1189>  ; # Placeholder for study publication, no publication available for this study. A study can have multiple publications, hence the duplication.
 	schema:hasPart [ a schema:SoftwareSourceCode ;
                    schema:codeRepository "https://github.com/ohdsi-studies/Covid19EstimationHydroxychloroquine" ;
@@ -111,7 +116,7 @@ concept:1713332 a schema:Drug ;
 	              schema:sameAs "http://purl.bioontology.org/ontology/RXNORM/723"
               ] .
 
-<https://covid19.ohdsi.app/> a schema:Event ;
+<https://covid19.ohdsi.app/> a schema:Event ; #NOTE: Google rich results test doesn't seem to support virtual location
 	schema:name "COVID-19 virtual study-a-thon" ;
 	schema:organizer ohdsi:OHDSI ;
 	schema:location [ a schema:VirtualLocation ;
@@ -193,12 +198,12 @@ person:schuemie a schema:Person ;
 
 database:thin a ohdsi:Database ;
 	schema:identifier "THIN" ;
-	schema:name "The Health Improvement Network" .
+	schema:description "The Health Improvement Network" .
 
 database:ipci a ohdsi:Database ;
 	schema:identifier "IPCI" ;
-	schema:name "Integrated Primary Care Information" .
+	schema:description "Integrated Primary Care Information" .
 
 database:cprd a ohdsi:Database ;
 	schema:identifier "CPRD" ;
-	schema:name "Clinical Practice Research Datalink" .
+	schema:description "Clinical Practice Research Datalink" .
